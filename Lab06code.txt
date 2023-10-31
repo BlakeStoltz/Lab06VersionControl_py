@@ -6,13 +6,6 @@ def encoder(message):
         result += new_digit
     return result
 
-#runs decoder
-def decoder(message):
-    result = ''
-    for digit in message:
-        new_digit = str((int(digit) - 3) % 10)
-        result += new_digit
-    return result
 
 # runs the menu and options
 def main():
@@ -33,8 +26,7 @@ def main():
         # calls the decoder and decodes a password
         elif choice == "2":
             value = input("The encoder password is  ")
-            print("and the original password is", decoder(value))
-
+            
         # terminates/exits code
         elif choice == "3":
             break
