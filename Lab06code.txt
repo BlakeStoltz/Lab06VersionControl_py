@@ -1,0 +1,48 @@
+# runs encoder
+def encoder(message):
+    result = ''
+    for digit in message:
+        new_digit = str((int(digit) + 3) % 10)
+        result += new_digit
+    return result
+
+#runs decoder
+def decoder(message):
+    result = ''
+    for digit in message:
+        new_digit = str((int(digit) - 3) % 10)
+        result += new_digit
+    return result
+
+# runs the menu and options
+def main():
+    # prints menu
+    while True:
+        print("Menu")
+        print("-------------")
+        print("1. Encode")
+        print("2. Decode")
+        print("3. Quit")
+        choice = input("Please enter an option: ")
+
+        #calls the encoder and encodes a password
+        if choice == "1":
+            value = input("Please enter your password to encode: ")
+            print("Your password has been encoded and stored!")
+
+        # calls the decoder and decodes a password
+        elif choice == "2":
+            value = input("The encoder password is  ")
+            print("and the original password is", decoder(value))
+
+        # terminates/exits code
+        elif choice == "3":
+            break
+
+        # displays message if invalid choice is inputed
+        else:
+            print("Invalid choice")
+        print()
+
+
+main()
