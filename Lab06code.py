@@ -1,3 +1,4 @@
+# Blake Stoltz
 # runs encoder
 def encoder(message):
     result = ''
