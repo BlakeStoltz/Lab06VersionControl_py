@@ -7,7 +7,6 @@ def encoder(message):
         result += new_digit
     return result
 
-
 # Takes a numeric string with each digit shifted up by 3 and returns a message with the given and decoded string.
 def decode(encoded_password):
     original_string = ""
@@ -22,7 +21,6 @@ def decode(encoded_password):
         else:
             original_string += str(int(char) - 3)
     return "The encoded password is " + (encoded_password) + ", and the original password is " + (original_string) + "."
-
 
 # runs the menu and options
 def main():
@@ -53,6 +51,4 @@ def main():
         else:
             print("Invalid choice")
         print()
-
-
 main()
